@@ -34,7 +34,7 @@ header>a:hover, footer>a:hover {
 }
 
 header{
-    position: relative;
+    position: sticky;
     top: 0px;
 }
 
