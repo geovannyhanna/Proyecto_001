@@ -1,0 +1,48 @@
+html{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header, footer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(57, 57, 57);       
+    padding: 20px;
+    height: 40px;
+}
+header>*, footer>*{
+    margin-right: 40px ;
+    text-decoration: none;
+    color: floralwhite;
+}
+header> button > img, header>button{
+    width: 24px;
+    height: auto;
+    background: none;
+    font-size: 16px;
+    border-width: 0;
+    margin-right: 80px;
+}
+
+#cart-btn:hover{
+    scale: 120%;
+}
+
+
+header>a:hover, footer>a:hover {
+    text-decoration: underline;
+}
+header{
+    position: absolute;
+    top: 0px;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0px;
+}
+
+header>*:last-child, footer>*:last-child {
+    margin-left: auto;
+}
