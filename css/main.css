@@ -32,17 +32,27 @@ header> button > img, header>button{
 header>a:hover, footer>a:hover {
     text-decoration: underline;
 }
-header{
-    position: absolute;
+
+header {
+    position: fixed;
     top: 0px;
+    z-index: 100;
 }
 
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
 }
 
 header>*:last-child, footer>*:last-child {
     margin-left: auto;
+}
+
+body {
+    margin-top: 80px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 120px;
 }
