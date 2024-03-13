@@ -15,7 +15,7 @@
         <a href="/store.html"> Store</a>
         <a href="/contactUs.html"> Contact us</a>
         <button id="cart-btn"><img src="/Images/source/shopping-cart.png" alt=""></button>
-
+        
     </header>
 
     <div id="mainContent">
@@ -27,14 +27,12 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3518.5194108236296!2d-15.441718387885434!3d28.13067202584211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc409510e18c23b9%3A0x51ceb8d9a0060bf!2sAv.%20Jos%C3%A9%20Mesa%20y%20L%C3%B3pez%2C%2069%2C%2035010%20Las%20Palmas%20de%20Gran%20Canaria%2C%20Las%20Palmas!5e0!3m2!1ses!2ses!4v1710275940600!5m2!1ses!2ses"
                 width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-
         </div>
-        <div id="contactUsInfo">
+
+        <div id="form">
             <h1>Contact us</h1>
             <p>Leave your information below and we will try out best to be in contact with you in les than 48 hours.</p>
-        </div>
-        <div id="form">
-            <h1>Contact information</h1>
+
 
             <label for="contact-Name"> Name</label>
             <input type="text" placeholder="Type in your name" id="contact-Name">
@@ -58,6 +56,21 @@
         </div>
 
     </div>
+    <aside id="shopping-cart">
+        <h2> Cart</h2>
+        <div id="shopping-cart-content">
+            <div class="shopping-cart-item"> 
+                <span>Item name 1</span>
+                <input type="number">
+                <span> 0€</span>
+            </div>
+        </div>
+        <div id="price">
+            <h2 id="totalPriceTag">Total price</h2>
+            <span id="totalPrice"> 0€</span>
+        </div>
+        
+    </aside>
 
     <footer>
         <a href="">Instagram</a>
