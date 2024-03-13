@@ -35,6 +35,7 @@ header>a:hover, footer>a:hover {
 
 header{
     position: sticky;
+    position: sticky;
     top: 0px;
 }
 
@@ -101,4 +102,78 @@ footer {
 
 header>*:last-child, footer>*:last-child {
     margin-left: auto;
+}
+
+#mainContent{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+#form>label, #form>input, #form>select, #inquiry{
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    height: 20px;
+    resize:vertical;
+    max-height: 200px;
+}
+
+#form>label, #form>button{
+    margin-top: 50px;
+    font-weight: 600;
+}
+
+#form>input, #form>select, #inquiry{
+    position: relative;
+    border-width: 4px;
+    border-radius: 2px;
+    border-color: rgb(188, 188, 188);
+    border-style: solid;
+}
+#form>input:focus, #form>select:focus, #inquiry:focus{
+    outline: 2px dashed black;
+
+}
+#form>button{
+    float:right;
+    background-color: black;
+    border-width: 0px;
+    border-radius: 24px;
+    color: floralwhite;
+    padding: 12px;
+}
+#form>button:hover {
+    background-color: floralwhite;
+    border-radius: 24px;
+    border-width: 2px;
+    border: 2px solid black;
+    color: black;
+    padding: 12px;
+}
+
+#contactUsInfo, #aboutUsInfo{
+    text-align: center;
+    margin-bottom: 120px;
+    border-bottom: 4px solid rgb(188, 188, 188);
+    border-style: ;    
+}
+
+#aboutUsInfo>p{
+    text-align: left;
+}
+#mainContent a{
+    text-decoration: none;
+    color: coral;
+
+}
+#mainContent a:hover {
+    text-decoration: underline;
+}
+
+#form>h1{
+    text-align: center;
 }
