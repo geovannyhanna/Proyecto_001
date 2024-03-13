@@ -1,0 +1,86 @@
+.presentation {
+    text-align: justify;
+    color: black;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    color: black;
+    text-shadow: 1px 1px 2px rgba(73, 73, 73, 0.5); 
+}
+
+.background {
+    width: 100%;
+}
+
+.company {
+    font-size: 100px;
+    font-weight: bolder;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.landing-whyus {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50px;
+    border-color: black;
+}
+
+ul {
+    display: inline-block;
+    text-align: center;
+    max-width: 200px;
+    background-color: #e8e8e8;
+    border: rgb(184, 184, 184);
+    border-style:dotted;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+ul li {
+    display: block;
+    margin-top: 2%;
+    
+}
+
+ul:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.comment {
+    font-size: 80%;
+}
+
+.rating {
+    font-weight: bold;
+    font-size: 90%;
+
+}
+
+.person {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1)
+}
+
+.testimonials {
+    display: flex;
+    justify-content: space-around;
+}

@@ -33,10 +33,10 @@ header>a:hover, footer>a:hover {
     text-decoration: underline;
 }
 
-header{
-    position: sticky;
-    position: sticky;
+header {
+    position: fixed;
     top: 0px;
+    z-index: 100;
 }
 
 #caracteristicas > div {
@@ -46,6 +46,9 @@ header{
     width: fit-content;
 }
 
+footer {
+    position: fixed;
+}
 .precio-servicio {
     display: flex;
     justify-content:space-around;
@@ -95,15 +98,19 @@ header{
   }
 
 
-footer {
-    position: auto;
-    bottom: 0px;
-}
+
 
 header>*:last-child, footer>*:last-child {
     margin-left: auto;
 }
 
+body {
+    margin-top: 80px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 120px;
+}
 #mainContent{
     padding-left: 10%;
     padding-right: 10%;
