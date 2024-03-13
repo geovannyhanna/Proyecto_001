@@ -10,11 +10,13 @@ header, footer{
     padding: 20px;
     height: 40px;
 }
+
 header>*, footer>*{
     margin-right: 40px ;
     text-decoration: none;
     color: floralwhite;
 }
+
 header> button > img, header>button{
     width: 24px;
     height: auto;
@@ -28,7 +30,6 @@ header> button > img, header>button{
     scale: 120%;
 }
 
-
 header>a:hover, footer>a:hover {
     text-decoration: underline;
 }
@@ -39,66 +40,14 @@ header {
     z-index: 100;
 }
 
-#caracteristicas > div {
-    text-align: center;
-    border-style: solid;
-    height: fit-content;
-    width: fit-content;
-}
-
 footer {
     position: fixed;
 }
-.precio-servicio {
-    display: flex;
-    justify-content:space-around;
-    text-align: center;
-}
-  
-  .landing-image {
-      width: auto;
-      /* Ancho del contenedor */
-      height: auto;
-      /* Altura del contenedor */
-     
-      text-align: center;
-      /* Centrar contenido horizontalmente */
-      display: flex;
-      /* Usar flexbox para centrar verticalmente */
-      justify-content: center;
-      /* Centrar contenido verticalmente */
-      align-items: center;
-      /* Centrar contenido verticalmente */
-      flex-direction: column;
-  }
 
-  img {
-      max-width: 100%;
-      /* Para asegurar que la imagen no se desborde del contenedor */
-      max-height: 100%;
-      /* Para asegurar que la imagen no se desborde del contenedor */
-  }
-
-
-  .slogan{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: Arial, Helvetica, sans-serif;
-
-  }
-
-  .titulos{
+.titulos{
     
     text-align: center;
   }
-
-
-
 
 header>*:last-child, footer>*:last-child {
     margin-left: auto;
@@ -111,6 +60,7 @@ body {
     margin-right: 0px;
     margin-bottom: 120px;
 }
+
 #mainContent{
     padding-left: 10%;
     padding-right: 10%;
@@ -150,21 +100,32 @@ body {
     max-height: 24em;
 
 }
+
 #form>input:focus, #form>select:focus, #inquiry:focus{
     outline: 4px dotted rgb(0, 0, 0);
 
 }
+
 #form>button{
     float:right;
+
+    background-color: black;
+    border-width: 0px;
+    border-radius: 24px;
+    color: floralwhite;
+    padding: 12px;
+}
+
+#form>button:hover {
     padding: 12px 18px;
     border-radius: 4px;
     font-size: large;
     background-color: floralwhite;
     border-width: 2px;
     border: 2px solid black;
-    color: black;
-    
+    color: black;  
 }
+
 #form>button:hover {
     background-color: black;
     color: floralwhite;    
@@ -193,6 +154,22 @@ body {
     text-align: center;
 }
 
+
+.background {
+    width: 100%;
+}
+
+.company {
+    font-size: 100px;
+    font-weight: bolder;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 #shopping-cart{
     position: fixed;
     background-color: white;
@@ -206,10 +183,12 @@ body {
     z-index: 1;
     resize:vertical;
 }
+
 #shopping-cart>h2:first-child{
     float: right;
     display: block;
 }
+
 #shopping-cart-content{
     display: flex;
     flex-direction: column;
@@ -227,9 +206,8 @@ body {
     height: 100px;
     font-size: 1.5em;
 
-
-    background-color: aquamarine;
-    
+  
+    background-color: aquamarine;  
 }
 
 #totalPriceTag{
@@ -247,6 +225,7 @@ body {
     font-weight: 45em ;
 
 }
+
 #price{
     padding: 40px 0;
 }
