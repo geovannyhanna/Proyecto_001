@@ -11,23 +11,6 @@
     text-shadow: 1px 1px 2px rgba(73, 73, 73, 0.5); 
 }
 
-.background {
-    width: 100%;
-}
-
-.company {
-    font-size: 100px;
-    font-weight: bolder;
-    color: white;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-
-
 .landing-whyus {
     margin-left: 5%;
     margin-right: 5%;
@@ -44,8 +27,7 @@ ul {
     border-style:dotted;
     padding: 10px;
     border-radius: 10px;
-    overflow: hidden;
-    
+    overflow: hidden; 
 }
 
 ul li {
