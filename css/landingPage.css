@@ -1,0 +1,41 @@
+.precio-servicio {
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+}
+  
+.landing-image {
+      width: auto;
+      /* Ancho del contenedor */
+      height: auto;
+      /* Altura del contenedor */
+     
+      text-align: center;
+      /* Centrar contenido horizontalmente */
+      display: flex;
+      /* Usar flexbox para centrar verticalmente */
+      justify-content: center;
+      /* Centrar contenido verticalmente */
+      align-items: center;
+      /* Centrar contenido verticalmente */
+      flex-direction: column;
+  }
+
+  .slogan{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+
+  #caracteristicas>div {
+  text-align: center;
+      border-style: solid;
+      height: fit-content;
+      width: fit-content;
+    }
