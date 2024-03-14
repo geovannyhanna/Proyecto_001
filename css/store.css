@@ -3,7 +3,7 @@
     height: 100%;
     width: 100%;
     justify-content: space-around;
-    
+    margin-top: 125px;
 }
 
 #grid-productos img{
@@ -12,21 +12,37 @@
     border-radius: 3vh;
 }
 
-
+.shopping-cart-button{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    margin: 0 auto;
+    
+}
 
 .product{
+    position: relative;
     box-shadow: 1px 1px 2px rgba(73, 73, 73, 0.5); ;
-    display: flexbox;
-        text-align: center;
-        max-width: 200px;
-        background-color: #e8e8e8;
-        border: rgb(184, 184, 184);
-        border-style: dotted;
-        padding: 10px;
-        border-radius: 10px;
-        overflow: hidden;
+    display: flex;
+    text-align: center;
+    max-width: 200px;
+    background-color: #e8e8e8;
+    border: rgb(184, 184, 184);
+    border-style: dotted;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
        
 }
+
+.product p {
+    position: absolute;
+    bottom: 60px;
+}
+
+
 
 #grid-productos img:hover {
     transform: scale(1.1);
