@@ -9,7 +9,7 @@ function openCart() {
         shoppingCartItem.style.display = "none";
         cartVisible = false;
     } else {
-        shoppingCartItem.style.display = "block";
+        shoppingCartItem.style.display = "block"; 
         cartVisible = true;
     }
     console.log("I've been pressed");
