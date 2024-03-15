@@ -16,3 +16,33 @@ document.addEventListener('DOMContentLoaded', function () {
         showArticle(index);
     });
 });
+
+
+document.getElementById("submitBtn").addEventListener("click", function () {
+    var nameInput = document.getElementById("contact-Name");
+    var emailInput = document.getElementById("contact-Email");
+    var phoneInput = document.getElementById("phone-Number");
+    var languageInput = document.getElementById("preffered-Language");
+    var inquiryInput = document.getElementById("inquiry");
+
+    nameInput.style.backgroundColor = "lightgreen";
+    emailInput.style.backgroundColor = "lightgreen";
+    phoneInput.style.backgroundColor = "lightgreen";
+    languageInput.style.backgroundColor = "lightgreen";
+    inquiryInput.style.backgroundColor = "lightgreen";
+
+    submitBtn.textContent = "Message sent!";
+
+    setTimeout(function () {
+        submitBtn.textContent = "Submit";
+        nameInput.value = "";
+        emailInput.value = "";
+        phoneInput.value = "";
+        inquiryInput.value = "";
+        nameInput.style.backgroundColor = "white";
+        emailInput.style.backgroundColor = "white";
+        phoneInput.style.backgroundColor = "white";
+        languageInput.style.backgroundColor = "white";
+        inquiryInput.style.backgroundColor = "white";
+    }, 2000);
+});
