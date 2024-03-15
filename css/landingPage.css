@@ -107,6 +107,7 @@ ul:hover {
   text-align: center;
   border-radius: 10px 10px 0 0;
   padding: 20px;
+  padding-bottom: 120px;
 
 }
 
@@ -129,14 +130,6 @@ ul:hover {
   display: block;
 }
 
-button {
-  margin-top: 20px;
-  border-radius: 5px 5px 5px 5px;
-  border-style: ridge;
-  background-color: rgb(210, 210, 210);
-  font-family: 'Montserrat', sans-serif;
-  margin-left: 1200px;
-}
 
 .titlearticle {
   font-size: x-large;

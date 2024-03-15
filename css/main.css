@@ -12,9 +12,13 @@ header, footer{
 }
 
 header>*, footer>*{
-    margin-right: 40px ;
+    margin-right: 54px ;
     text-decoration: none;
     color: floralwhite;
+    font-size: 1.2em;
+}
+header>a:hover, footer>a:hover {
+    text-decoration: underline;
 }
 
 header> button > img, header>button{
@@ -30,9 +34,7 @@ header> button > img, header>button{
     scale: 120%;
 }
 
-header>a:hover, footer>a:hover {
-    text-decoration: underline;
-}
+
 
 header {
     position: fixed;
@@ -43,6 +45,15 @@ header {
 footer {
     position: fixed;
     bottom: 0;
+}
+
+#banner {
+    position: relative;
+}
+
+.company {
+    position: absolute;
+    margin: 0 auto;
 }
 
 .titulos{
@@ -62,12 +73,13 @@ body {
 }
 
 #mainContent{
+    position: sticky;
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 50px;
     max-width: 800px;
     margin: 0 auto;
-    padding-bottom: 0px;
+    padding-bottom: 200px;
 }
 
 #form>label, #form>input, #form>select, #inquiry{
@@ -106,24 +118,18 @@ body {
 
 }
 
-#form>button{
-    float:right;
-
-    background-color: black;
-    border-width: 0px;
-    border-radius: 24px;
-    color: floralwhite;
-    padding: 12px;
+body>div button{
+    float: right;
+    padding: 18px;
+    border-radius: 48px;
+    background-color: floralwhite;
+    border: 2px solid black;
+    color: black;
 }
 
-#form>button:hover {
-    padding: 12px 18px;
-    border-radius: 4px;
-    font-size: large;
-    background-color: floralwhite;
-    border-width: 2px;
-    border: 2px solid black;
-    color: black;  
+body>div button:hover {
+    color: floralwhite;
+    background-color: black;
 }
 
 #form>button:hover {
@@ -178,7 +184,7 @@ body {
     top:60px;
     right: 20px;
     padding: 0 20px;
-    box-shadow: -6px 6px 48px grey;
+    box-shadow: -6px 6px 48px rgb(10, 10, 10);
     border-radius: 8px;
     z-index: 10000;
     resize:vertical;
@@ -190,46 +196,59 @@ body {
 }
 
 #shopping-cart-content{
-    position: sticky;
+    position: relative;
     max-height: 154px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: floralwhite;
+
 }
 
 .shopping-cart-item{
     display: flex;
+    position: relative;
     align-items: center;
     margin-bottom: 10px;
-    width: 100%;;
+    width: 100%;
     height: 48px;
     font-size: 1.5em;
+    border-bottom: 1px dashed black;
+
 }
 
 
+
 .numberOfItems {
-    width:60px;
-   
+    width: 50px;
     margin-left: 40px;
-    margin-right: 30px;
     border-radius: 8px;
-    border: 2px solid black;
+    border: 4px solid black;
     font-size: 1em;
+    margin-right: 20px;
+    font-weight: bold;
     height: fit-content;
+    max-height: 50%;
     
 }
 
 .unitaryPrice{
-        margin-left: auto; ;
+    margin-left: auto;
 }
 
+.totalUnitaryPrice{
+    position: sticky;    
+    margin-right: 60px;
+    max-width: 20px;
+    
+
+}
 
 
 #totalPriceTag{
     display: inline-block;
     margin-top: 0px;
+
 }
 
 #totalPrice{

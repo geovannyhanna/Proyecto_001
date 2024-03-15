@@ -10,10 +10,9 @@ function openCart() {
         shoppingCartItem.style.display = "none";
         cartVisible = false;
     } else {
-        shoppingCartItem.style.display = "block"; 
+        shoppingCartItem.style.display = "block";
         cartVisible = true;
     }
-    console.log("I've been pressed");
 }
 
 shoppingCartButton.addEventListener("click", openCart);
@@ -25,27 +24,32 @@ function updateTotalPrice() {
         const totalUnitaryPrice = parseFloat(item.querySelector(".totalUnitaryPrice").innerText);
         totalPrice += totalUnitaryPrice;
     }
-    totalPriceSpan.innerText = totalPrice + "€";
+    totalPriceSpan.innerText = `${totalPrice}€`;
 }
 
+function updateItemTotal(item) {
+    const unitaryPrice = parseFloat(item.querySelector(".unitaryPrice").innerText);
+    const quantityInput = item.querySelector(".numberOfItems");
+    let quantity = parseInt(quantityInput.value);
 
+    if (quantity < 0) {
+        item.remove();
+        updateTotalPrice();
+        return;
+    }
+
+    const totalUnitaryPrice = unitaryPrice * quantity;
+    item.querySelector(".totalUnitaryPrice").innerText = `${totalUnitaryPrice}€`;
+    updateTotalPrice();
+}
+
+// Aplicar la función de actualización a todos los elementos existentes.
 for (let i = 0; i < arrayOfElements.length; i++) {
     const item = arrayOfElements[i];
-    const unitaryPrice = parseFloat(item.querySelector(".unitaryPrice").innerText);
     const quantityInput = item.querySelector(".numberOfItems");
 
     quantityInput.addEventListener("input", function () {
-        let quantity = parseInt(quantityInput.value);
-        if (quantity < 0) {
-            console.log(item)
-            item.remove();
-            quantity = 0;
-            
-        }
-        quantityInput.value = quantity;
-        const totalUnitaryPrice = unitaryPrice * quantity;
-        item.querySelector(".totalUnitaryPrice").innerText = totalUnitaryPrice + "€";
-        updateTotalPrice();
+        updateItemTotal(item);
     });
 }
 
@@ -57,48 +61,45 @@ quantityInputs.forEach(input => {
     });
 });
 
-for (let i = 0; i < botonCarrito.length; i++) {
-    botonCarrito[i].addEventListener("click", añadirAcarrito);
-}
-
+// Función para añadir productos al carrito.
 function añadirAcarrito(event) {
-    // Obtener el producto
     const product = event.target.closest('.product');
     const productName = product.querySelector('h2').innerText;
-    const productPrice = parseFloat(product.querySelector('p').innerText.slice(1)); // Extraer el precio sin el símbolo de $
-
-    // Verificar si el producto ya existe en el carrito
+    const productPrice = parseFloat(product.querySelector('p').innerText.slice(1));
     let itemExists = false;
+
     for (let i = 0; i < arrayOfElements.length; i++) {
         const item = arrayOfElements[i];
-        
         if (item.querySelector('.itemName').innerText === productName) {
-            
             itemExists = true;
             const quantityInput = item.querySelector('.numberOfItems');
-            let quantity = parseInt(quantityInput.value) + 1;
-            quantityInput.value = quantity;
-            const totalUnitaryPrice = productPrice * quantity;
-            item.querySelector('.totalUnitaryPrice').innerText = totalUnitaryPrice + "€";
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+            updateItemTotal(item);
             break;
         }
     }
 
-    // Si el producto no existe en el carrito, crear un nuevo elemento
     if (!itemExists) {
         const newItem = document.createElement('div');
         newItem.classList.add('shopping-cart-item');
-
         newItem.innerHTML = `
             <span class="itemName">${productName}</span>
             <span class="unitaryPrice">${productPrice}€</span>
-            <input class="numberOfItems" type="number">
+            <input class="numberOfItems" type="number" value="1">
             <span class="totalUnitaryPrice">${productPrice}€</span>
         `;
 
         document.getElementById('shopping-cart-content').appendChild(newItem);
-    }
+        const newQuantityInput = newItem.querySelector(".numberOfItems");
+        newQuantityInput.addEventListener("input", function () {
+            updateItemTotal(newItem);
+        });
 
-    // Actualizar el precio total del carrito
-    updateTotalPrice();
+        updateTotalPrice();
+    }
+}
+
+// Event listener para añadir productos al carrito.
+for (let i = 0; i < botonCarrito.length; i++) {
+    botonCarrito[i].addEventListener("click", añadirAcarrito);
 }
